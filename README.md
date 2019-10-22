@@ -20,6 +20,14 @@ Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'
 
 ### MacOS Installation
 
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1.gif?raw=true)
+
+The prefered way to install Ansible on MacOS is through the pip command as shown. Note: depending on user permissions you may have to use the sudo command
+
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S2.gif?raw=true)
+
+When the install completes, verify Ansible has been installed through running Ansible or Ansible -h
+
 ### Windows Installation
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
