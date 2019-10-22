@@ -12,7 +12,15 @@ Functionality of ansible includes:
 * Communicate securely with network hardware over SSH or HTTPS
 
 
-## Step 0 - Installing Ansible 
+## Exercise 0 - Installing Ansible 
+
+Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explore the simple installation process on each platform to prepare our working environment.
+
+### Linux installation
+
+### MacOS Installation
+
+### Windows Installation
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
 
