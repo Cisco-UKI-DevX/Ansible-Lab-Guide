@@ -13,9 +13,9 @@ For people not familiar at all with this area, typical functionality of Ansible 
 
 ## Exercise 0 - Installing Ansible 
 
-Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use a Linux for exercises 1,2 and 3 but the commands across platforms should remain consistent. For detailed installation guides please use the guide provided by ansible (INSERT LINK HERE) My preferred method for building your owd network automation environment is to create a linux VM. (WHY??
+Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use a Linux for exercises 1,2 and 3 but the commands across platforms should remain consistent. For detailed installation guides please use the guide provided by ansible (INSERT LINK HERE) My preferred method for building your owd network automation environment is to create a linux VM. (WHY??))
 
-For speed though you may wish to install Anisble on your day to day machine which is why we have also included indstructions for MacOS and windows also.
+For speed though you may wish to install Ansible on your day to day machine which is why we have also included indstructions for MacOS and windows also.
 
 ### Linux installation (via APT e.g. CentOS, Ubunutu etc) 
 
@@ -60,9 +60,17 @@ One of the fundamental concepts of Ansible are playbooks. Playbooks are one of t
 
 Playbooks contain the steps which the user wants to execute on a particular machine. Playbooks are run sequentially. Playbooks are the building blocks for all the use cases of Ansible. It's important to note that playbooks normally utilise modules, these modules normally define the functionality of your playbook and what systems and features your playbook will excute on, we'll cover a few in this guide but for a more complete list see the modules index hosted on the Ansible site https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
 
-In this exercise we are going to create our own Ansible playbook to push a configuration to our always-on sandbox. As this is a shared environment we're going to have
+In this exercise we are going to create our own Ansible playbook to push a configuration to our always-on sandbox. As this is a shared environment we're going to have multiple people accessing the same box therefore we'll configure a unique loopback interface on the device, to avoid people editing the same configuration.
 
 NOTE: Your instructor should assign you a number to use in your config for this lab, keep a note of it as we'll use it later on. if you're doing this self paced just use your birthday in date format. So for example if your birthday is the 12th of August - use 1208 or 0812 whatever your personal preference is.
+
+### Step 1 - Creating our ansible host file
+
+Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. First off the 
+
+### Step 2 - Creating our ansible playbook
+
+
 
 ## Exercise 2 (Walk) - 
 
