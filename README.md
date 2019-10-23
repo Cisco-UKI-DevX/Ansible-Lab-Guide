@@ -55,8 +55,14 @@ Most popular sandboxes include:
 Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. Also note that This sandbox resource is shared. This means that you can see other developers' and network engineers' changes and they can see yours. Please, do not erase or change configuration you have not created yourself.
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
+ 
+One of the fundamental concepts of Ansible are playbooks. Playbooks are one of the core features of Ansible and tell Ansible what to execute. They are like a to-do list for Ansible that contains a list of tasks. Playbooks are the files where Ansible code is written. Playbooks are written in YAML format. YAML stands for Yet Another Markup Language. PThey are like a to-do list for Ansible that contains a list of tasks.
 
-One of the fundamental concepts of Ansible are playbooks.
+Playbooks contain the steps which the user wants to execute on a particular machine. Playbooks are run sequentially. Playbooks are the building blocks for all the use cases of Ansible.
+
+In this exercise we are going to create our own Ansible playbook to push a configuration to our always-on sandbox. As this is a shared environment we're going to have
+
+NOTE: Your instructor should assign you a number to use in your config for this lab, keep a note of it as we'll use it later on. if you're doing this self paced just use your birthday in date format. So for example if your birthday is the 12th of August - use 1208 or 0812 whatever your personal preference is.
 
 ## Exercise 2 (Walk) - 
 
