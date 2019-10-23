@@ -19,7 +19,11 @@ For speed though you may wish to install anisble on your day to day machine whic
 
 ### Linux installation (via APT e.g. CentOS, Ubunutu etc) 
 
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1-Linux.gif?raw=true)
+
 The most common way to install Ansible on MacOS is through the apt-get install ansible command as shown. Again depending on user permissions you may have to use the sudo command
+
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S2-Linux.gif?raw=true)
 
 When the install completes, verify Ansible has been installed through running Ansible or Ansible -h
 
