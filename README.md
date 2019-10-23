@@ -77,6 +77,24 @@ ansible_ssh_pass=C1sco12345'''
 
 ### Step 2 - Creating our ansible playbook
 
+As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules.
+
+
+
+---
+
+- hosts: Test-Router
+  gather facts: false
+  connection: local
+
+- name: configure loopback interface
+  ios_config:
+    lines:
+      - description Loopback1208 created with ansible
+      - ip address 1.1.1.1 255.255.255.0
+    parents: interface Loopback1208
+
+
 
 ## Exercise 2 (Walk) - 
 
