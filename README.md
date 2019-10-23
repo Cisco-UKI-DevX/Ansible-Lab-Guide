@@ -17,9 +17,9 @@ Functionality of ansible includes:
 
 ## Exercise 0 - Installing Ansible 
 
-Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use Linux but the commands
+Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use Linux but the commannds across platforms should remain consistent. For detailed installation guides please use the guide provided by ansible which covers the majority of package managers for this guide we will focus on common Linux distros, MacOS and Windows.
 
-### Linux installation
+### Linux installation (via APT e.g. CentOS, Ubunutu etc) 
 
 ### MacOS Installation
 
