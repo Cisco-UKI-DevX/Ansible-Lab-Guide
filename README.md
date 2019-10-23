@@ -4,7 +4,7 @@
 
 Ansible is one of the most popular configuration management and provisioning tools in use today. While is mainly synonomous with server management Ansible is being increasingly used for tasks on network infrastructure. The goal of this lab guide is to walk through some of the functionality of Ansible from a very much beginner starting point, working towards some of the more advanced functionality. The idea is to not just focus on the tooling, as this can vary but to look at Network Automation concepts including NETCONF/RESTCONF, Rest API's, controller based networking etc
 
-Functionality of ansible includes:
+For people not familiar at all with this area, typical functionality of Ansible includes:
 
 * Automate repetitive tasks to speed routine network changes and deployments
 * Leverage the same automation tools for network tasks that operations and development use
