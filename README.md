@@ -19,12 +19,16 @@ For speed though you may wish to install anisble on your day to day machine whic
 
 ### Linux installation (via APT e.g. CentOS, Ubunutu etc) 
 
+The most common way to install Ansible on MacOS is through the apt-get install ansible command as shown. Again depending on user permissions you may have to use the sudo command
+
+When the install completes, verify Ansible has been installed through running Ansible or Ansible -h
+
 
 ### MacOS Installation
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1.gif?raw=true)
 
-The prefered way to install Ansible on MacOS is through the pip command as shown. Note: depending on user permissions you may have to use the sudo command
+The prefered way to install Ansible on MacOS is through the pip install command as shown. Again depending on user permissions you may have to use the sudo command
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S2.gif?raw=true)
 
@@ -48,6 +52,7 @@ Please note you are free to use this with your own hardware or test environment.
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
 
+One of the fundamental concepts of Ansible are playbooks.
 
 ## Exercise 2 (Walk) - 
 
