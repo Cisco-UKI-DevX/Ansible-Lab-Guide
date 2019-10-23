@@ -68,12 +68,12 @@ NOTE: Your instructor should assign you a number to use in your config for this 
 
 Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. On a Linux system this can be found in /etc/ansible/hosts. When you get access to the file with a text editor, for example on Ubuntu you can use vi /etc/ansible/hosts Once you have access to the hosts file add the below lines.
 
-[test-router]
+'''[test-router]
 ios-xe-mgmt.cisco.com:8181
 
 [test-router:vars]
 ansible_user=developer
-ansible_ssh_pass=C1sco12345
+ansible_ssh_pass=C1sco12345'''
 
 ### Step 2 - Creating our ansible playbook
 
