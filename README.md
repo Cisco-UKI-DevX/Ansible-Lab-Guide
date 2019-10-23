@@ -58,7 +58,7 @@ Please note you are free to use this with your own hardware or test environment.
  
 One of the fundamental concepts of Ansible are playbooks. Playbooks are one of the core features of Ansible and tell Ansible what to execute. They are like a to-do list for Ansible that contains a list of tasks. Playbooks are the files where Ansible code is written. Playbooks are written in YAML format. YAML stands for Yet Another Markup Language. See them as like a to-do list for Ansible that contains a list of tasks.
 
-Playbooks contain the steps which the user wants to execute on a particular machine. Playbooks are run sequentially. Playbooks are the building blocks for all the use cases of Ansible.
+Playbooks contain the steps which the user wants to execute on a particular machine. Playbooks are run sequentially. Playbooks are the building blocks for all the use cases of Ansible. It's important to note that playbooks normally utilise modules, these modules normally define the functionality of your playbook and what systems and features your playbook will excute on, we'll cover a few in this guide but for a more complete list see the modules index hosted on the Ansible site https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
 
 In this exercise we are going to create our own Ansible playbook to push a configuration to our always-on sandbox. As this is a shared environment we're going to have
 
