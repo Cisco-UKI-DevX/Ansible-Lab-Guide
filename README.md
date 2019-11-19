@@ -27,7 +27,6 @@ The most common way to install Ansible on MacOS is through the apt-get install a
 
 When the install completes, verify Ansible has been installed through running Ansible or Ansible -h
 
-
 ### MacOS Installation
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1.gif?raw=true)
@@ -54,7 +53,7 @@ Most popular sandboxes include:
 
 Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable IOS XE on CSR Recommended Code Sandbox. For full instructions please see the link below.
 
-https://devnetsandbox.cisco.com/RM/Diagram/Index/8df1c046-ac0f-4486-8016-2b72d271d355
+![](
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
  
@@ -71,13 +70,11 @@ NOTE: Your instructor should assign you a number to use in your config for this 
 Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. On a Linux system this can be found in /etc/ansible/hosts. When you get access to the file with a text editor, for example on Ubuntu you can use vi /etc/ansible/hosts Once you have access to the hosts file add the below lines.
 
     [test-router]
-    ios-xe-mgmt.cisco.com:8181
+    10.10.20.48
 
 ### Step 2 - Creating our ansible playbook
 
 As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules.
-
-
 
     ---
 
@@ -91,7 +88,6 @@ As mentioned earlier one of the main components of an Ansible playbook are the m
           - description Loopback1208 created with ansible
           - ip address 1.1.1.1 255.255.255.0
         parents: interface Loopback1208
-
 
 
 ## Exercise 2 (Walk) - 
