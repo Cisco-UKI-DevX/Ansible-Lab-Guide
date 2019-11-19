@@ -73,10 +73,6 @@ Before we can build our playbook, we must define the devices we are going to be 
     [test-router]
     ios-xe-mgmt.cisco.com:8181
 
-    [test-router:vars]
-    ansible_user=developer
-    ansible_ssh_pass=C1sco12345
-
 ### Step 2 - Creating our ansible playbook
 
 As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules.
