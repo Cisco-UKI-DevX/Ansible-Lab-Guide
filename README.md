@@ -80,9 +80,9 @@ For more detail on Ansible inventories please refer to the Ansible Documentation
 
 ### Step 2 - Creating our ansible playbook
 
-As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases some of which you're probably thinking of already! In further exercises we'll explore more of these modules but to get started we'll use the ios_config moudle 
+As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push Cisco IOS configuration to devices, which can be configured to support mutliple usecases some of which you're probably thinking of already! In further exercises we'll explore more of these modules but to get started we'll use the ios_config module.
 
-Create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder which I done earlier. Examine the file and try to understand what its looking to do
+To get started create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder which I done earlier. Examine the file and try to understand what its looking to do
 
     ---
     
@@ -103,6 +103,10 @@ Create a file called deploy-loopback.yaml and paste in the below config, alterna
 Once you have your playbook build it's now time to run it. To do this we'll use the ansible-playbook command, to run this sucessfully and authenticate properly use the argument -u  and -k to ask the user for a SSH password before the playbook excecutes. `ansible-playbook deploy-loopback.yaml -u developer -k` 
 
 It is possible to specify passwords and usernames and variables within the inventory but we'll cover that at a later time.
+
+After the playbook runs ssh into the CSR and run show run to verify the loopback interface has been created.
+
+Well done, you've ran your first ansible playbook!
 
 ### Stretch exercise - Additional playbooks
 
