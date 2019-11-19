@@ -81,18 +81,18 @@ As mentioned earlier one of the main components of an Ansible playbook are the m
 
 
 
----
+    ---
 
-- hosts: Test-Router
-  gather facts: false
-  connection: local
+    - hosts: Test-Router
+      gather facts: false
+      connection: local
 
-- name: configure loopback interface
-  ios_config:
-    lines:
-      - description Loopback1208 created with ansible
-      - ip address 1.1.1.1 255.255.255.0
-    parents: interface Loopback1208
+    - name: configure loopback interface
+      ios_config:
+       lines:
+          - description Loopback1208 created with ansible
+          - ip address 1.1.1.1 255.255.255.0
+        parents: interface Loopback1208
 
 
 
