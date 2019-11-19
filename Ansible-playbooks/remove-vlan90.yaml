@@ -1,0 +1,40 @@
+---
+
+- hosts: routers
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: add DHCP pools
+      ios_config:
+        lines:
+          - no network 10.10.40.0 255.255.255.0
+          - no default-router 10.10.40.254
+        parents: ip dhcp pool VLAN0040
+
+    - name: Add interface
+      ios_config:
+        lines:
+          no ip address 10.10.40.254 255.255.255.0
+          ip nat inside
+        parents: interface vlan 40
+
+
+
+- hosts: switches
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Add vlan
+      ios_config:
+        lines:
+          -  name MISC
+        parents: vlan 40
+
+    - name: change switchports
+      ios_config:
+        lines:
+          - switchport mode access
+          - switchport access vlan 40
+        parents: interface gigabitEthernet1/0/12
