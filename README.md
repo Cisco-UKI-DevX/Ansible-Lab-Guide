@@ -61,47 +61,52 @@ One of the fundamental concepts of Ansible are playbooks. Playbooks are one of t
 
 Playbooks contain the steps which the user wants to execute on a particular machine. Playbooks are run sequentially. Playbooks are the building blocks for all the use cases of Ansible. It's important to note that playbooks normally utilise modules, these modules normally define the functionality of your playbook and what systems and features your playbook will excute on, we'll cover a few in this guide but for a more complete list see the modules index hosted on the Ansible site https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
 
-In this exercise we are going to create our own Ansible playbook to push a configuration to our always-on sandbox. As this is a shared environment we're going to have multiple people accessing the same box therefore we'll configure a unique loopback interface on the device, to avoid people editing the same configuration.
+In this exercise we are going to create our own Ansible playbook to push a configuration to our sandbox. If this is an instructor based lab this may be shared environment which we're going to have multiple people accessing the same box therefore we'll configure a unique loopback interface on the device, to avoid people editing the same configuration.
 
-NOTE: Your instructor should assign you a number to use in your config for this lab, keep a note of it as we'll use it later on. if you're doing this self paced just use your birthday in date format. So for example if your birthday is the 12th of August - use 1208 or 0812 whatever your personal preference is.
+NOTE: Your instructor should assign you a number to use in your config for this lab, keep a note of it as we'll use it later on. if you're doing this self paced just you're welcome to use whatever number you'd like.
 
 ### Step 1 - Creating our Ansible inventory
 
 Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. On a Linux system this can be found in /etc/ansible/hosts. When you get access to the file with a text editor, for example on Ubuntu you can use vi /etc/ansible/hosts Once you have access to the hosts file add the below lines.
 
-For more detail on Ansible inventories please refer to the Ansible Documentation which discusses this in more detail. https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
-
     [test-router]
     10.10.20.48
     
-The square brackets in an Ansible host file is the group name, which is then followed by the IP address or hostnames. Groups can be referenced within a playbook to decide which hosts a playbook will run against.
+The square brackets in an Ansible host file denotes the group name, which is then followed by the IP address or hostnames of the devices in the group. Groups can be referenced within a playbook to decide which hosts a playbook will run against.
  
 Note: There are two default groups: all and ungrouped. The all group contains every host. The ungrouped group contains all hosts that don’t have another group aside from all. 
 
+For more detail on Ansible inventories please refer to the Ansible Documentation which discusses this in more detail. https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+
 ### Step 2 - Creating our ansible playbook
 
-As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules. 
+As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases some of which you're probably thinking of already! In further exercises we'll explore more of these modules but to get started we'll use the ios_config moudle 
 
-Create a file and paste in the following config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder
+Create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder which I done earlier. Examine the file and try to understand what its looking to do
 
     ---
-
-    - hosts: Test-Router
-      gather facts: false
+    
+    - hosts: test-router
+      gather_facts: false
       connection: local
 
-    - name: configure loopback interface
-      ios_config:
-       lines:
-          - description Loopback1208 created with ansible
-          - ip address 1.1.1.1 255.255.255.0
-        parents: interface Loopback1208
+      tasks:
 
-Once you have your playbook
+        - name: configure loopback interface
+          ios_config:
+            lines:
+              - description Loopback1208 created with ansible
+              - ip address 1.1.1.1 255.255.255.0
+            parents: interface Loopback1208
+
+
+Once you have your playbook build it's now time to run it. To do this we'll use the ansible-playbook command, to run this sucessfully and authenticate properly use the argument -u  and -k to ask the user for a SSH password before the playbook excecutes. `ansible-playbook deploy-loopback.yaml -u developer -k` 
+
+It is possible to specify passwords and usernames and variables within the inventory but we'll cover that at a later time.
 
 ### Stretch exercise - Additional playbooks
 
-Within the ansible-playbooks folder there are some additional playbooks: change-snmp.yaml and get-backup.yaml. Explore the contents of these and run them with the ansible -u developer <playbook name> -k command.
+Within the ansible-playbooks folder there are some additional playbooks: change-snmp.yaml and get-backup.yaml. Explore the contents of these and run them with the ansible-playbook -u developer <playbook name> -k command.
 
 ## Exercise 2 (Walk) - 
 
