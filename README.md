@@ -53,7 +53,7 @@ Most popular sandboxes include:
 
 Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable IOS XE on CSR Recommended Code Sandbox. For full instructions please see the link below.
 
-![](
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/sandbox-screen.png)
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
  
