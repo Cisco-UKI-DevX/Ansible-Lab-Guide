@@ -51,7 +51,7 @@ Most popular sandboxes include:
 * Cisco SD-WAN environment - Always-On
 * Cisco DNA-C environment - Always-On
 
-Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable IOS XE on CSR Recommended Code Sandbox. For full instructions please see the link below.
+Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable IOS XE on CSR Recommended Code Sandbox which can be found on the Sandbox catalogue https://devnetsandbox.cisco.com/RM/Topology
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/sandbox-screen.png)
 
