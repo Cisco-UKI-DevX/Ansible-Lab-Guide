@@ -55,7 +55,7 @@ Please note you are free to use this with your own hardware or test environment.
 
 ![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/sandbox-screen.png)
 
-## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook
+## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook (CISCO IOS)
  
 One of the fundamental concepts of Ansible are playbooks. Playbooks are one of the core features of Ansible and tell Ansible what to execute. They are like a to-do list for Ansible that contains a list of tasks. Playbooks are the files where Ansible code is written. Playbooks are written in YAML format. YAML stands for Yet Another Markup Language. See them as like a to-do list for Ansible that contains a list of tasks.
 
@@ -65,16 +65,24 @@ In this exercise we are going to create our own Ansible playbook to push a confi
 
 NOTE: Your instructor should assign you a number to use in your config for this lab, keep a note of it as we'll use it later on. if you're doing this self paced just use your birthday in date format. So for example if your birthday is the 12th of August - use 1208 or 0812 whatever your personal preference is.
 
-### Step 1 - Creating our ansible host file
+### Step 1 - Creating our Ansible inventory
 
 Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. On a Linux system this can be found in /etc/ansible/hosts. When you get access to the file with a text editor, for example on Ubuntu you can use vi /etc/ansible/hosts Once you have access to the hosts file add the below lines.
 
+For more detail on Ansible inventories please refer to the Ansible Documentation which discusses this in more detail. https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+
     [test-router]
     10.10.20.48
+    
+The square brackets in an Ansible host file is the group name, which is then followed by the IP address or hostnames. Groups can be referenced within a playbook to decide which hosts a playbook will run against.
+ 
+Note: There are two default groups: all and ungrouped. The all group contains every host. The ungrouped group contains all hosts that don’t have another group aside from all. 
 
 ### Step 2 - Creating our ansible playbook
 
-As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules.
+As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push configuration, which can be configured to support mutliple usecases. In further exercises we'll explore more of these modules. 
+
+Create a file and paste in the following config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder
 
     ---
 
@@ -89,6 +97,11 @@ As mentioned earlier one of the main components of an Ansible playbook are the m
           - ip address 1.1.1.1 255.255.255.0
         parents: interface Loopback1208
 
+Once you have your playbook
+
+### Stretch exercise - Additional playbooks
+
+Within the ansible-playbooks folder there are some additional playbooks: change-snmp.yaml and get-backup.yaml. Explore the contents of these and run them with the ansible -u developer <playbook name> -k command.
 
 ## Exercise 2 (Walk) - 
 
