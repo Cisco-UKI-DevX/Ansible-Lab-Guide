@@ -104,7 +104,12 @@ Once you have your playbook build it's now time to run it. To do this we'll use 
 
 It is possible to specify passwords and usernames and variables within the inventory but we'll cover that at a later time.
 
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/run-playbook.gif)
+
+
 After the playbook runs ssh into the CSR and run show run to verify the loopback interface has been created.
+
+![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/show-run.gif)
 
 Well done, you've ran your first ansible playbook!
 
