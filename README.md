@@ -82,7 +82,7 @@ For more detail on Ansible inventories please refer to the Ansible Documentation
 
 As mentioned earlier one of the main components of an Ansible playbook are the modules, the main module we'll explore in this exercise is the ios_config module. This allows network engineers to use access Cisco network devices and push Cisco IOS configuration to devices, which can be configured to support mutliple usecases some of which you're probably thinking of already! In further exercises we'll explore more of these modules but to get started we'll use the ios_config module.
 
-To get started create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder which I done earlier. Examine the file and try to understand what its looking to do
+To get started create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the pre-made deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder. Examine the file and try to understand what its looking to do
 
     ---
 
