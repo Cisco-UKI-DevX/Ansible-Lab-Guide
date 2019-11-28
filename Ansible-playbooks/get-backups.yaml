@@ -4,19 +4,10 @@
 - hosts: localhost
 
   tasks:
-   - name: Get ansible date/time facts
-     setup:
-       filter: "ansible_date_time"
-       gather_subset: "!all"
-
-   - name: Store DTG as fact
-     set_fact:
-       DTG: "{{ ansible_date_time.date }}"
-
-   - name: Create Directory
-     file:
-      path: ../network-configs/
-      state: directory
+    - name: Create Directory
+      file:
+        path: ../network-configs/
+        state: directory
   run_once: true
 
 - hosts: all-network
@@ -24,12 +15,12 @@
   connection: local
 
   tasks:
-   - name: Backup all devices
-     ios_command:
-       commands: show run
-     register: config
+    - name: Backup all devices
+      ios_command:
+        commands: show run
+      register: config
 
-   - name: Save output to ../network-configs
-     copy:
-       content: "{{config.stdout[0]}}"
-       dest: "../network-configs/{{inventory_hostname}}"
+    - name: Save output to ../network-configs
+      copy:
+        content: "{{config.stdout[0]}}"
+        dest: "../network-configs/{{inventory_hostname}}"
