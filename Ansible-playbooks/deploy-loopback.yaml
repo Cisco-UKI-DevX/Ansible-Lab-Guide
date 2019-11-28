@@ -1,11 +1,9 @@
 ---
-
 - hosts: test-router
   gather_facts: false
   connection: local
 
   tasks:
-
     - name: configure loopback interface
       ios_config:
         lines:
