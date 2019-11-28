@@ -19,21 +19,21 @@ For speed though you may wish to install Ansible on your day to day machine whic
 
 ### Linux installation (via APT e.g. CentOS, Ubuntu etc)
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1-Linux.gif?raw=true)
+![](./images/E0S1-Linux.gif)
 
 The most common way to install Ansible on MacOS is through the `apt-get install ansible` command as shown. Again depending on user permissions you may have to use the `sudo` command
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S2-Linux.gif?raw=true)
+![](./images/E0S2-Linux.gif)
 
 When the install completes, verify Ansible has been installed by running `Ansible` or `Ansible -h`
 
 ### MacOS Installation
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S1.gif?raw=true)
+![](./images/E0S1.gif)
 
 The preferred way to install Ansible on MacOS is through the `pip install` command as shown. Again depending on user permissions you may have to use the `sudo` command
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/E0S2.gif?raw=true)
+![](./images/E0S2.gif)
 
 When the install completes, verify Ansible has been installed by running `Ansible` or `Ansible -h`
 
@@ -53,7 +53,7 @@ Most popular sandboxes include:
 
 Please note you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable IOS XE on CSR Recommended Code Sandbox which can be found on the Sandbox catalogue https://devnetsandbox.cisco.com/RM/Topology
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/sandbox-screen.png)
+![](./images/sandbox-screen.png)
 
 ## Exercise 1 (Crawl) - Simple device feature configuration with Ansible and building our first playbook (CISCO IOS)
 
@@ -103,11 +103,11 @@ Once you have your playbook build it's now time to run it. To do this we'll use 
 
 It is possible to specify passwords and usernames and variables within the inventory but we'll cover that at a later time.
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/run-playbook.gif)
+![](./images/run-playbook.gif)
 
 After the playbook runs ssh into the CSR and run show run to verify the loopback interface has been created.
 
-![](https://github.com/sttrayno/Ansible-Lab-Guide/blob/master/images/show-run.gif)
+![](./images/show-run.gif)
 
 Well done, you've ran your first ansible playbook!
 
