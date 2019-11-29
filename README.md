@@ -69,8 +69,10 @@ NOTE: Your instructor should assign you a number to use in your config for this 
 
 Before we can build our playbook, we must define the devices we are going to be working with in the ansible host file. The good news is this is nice and simple to start off. On a Linux system this can be found in /etc/ansible/hosts. When you get access to the file with a text editor, for example on Ubuntu you can use `vi /etc/ansible/hosts` Once you have access to the hosts file add the below lines.
 
-    [test-router]
-    10.10.20.48
+```yaml
+[test-router]
+10.10.20.48
+```
 
 The square brackets in an Ansible host file denotes the group name, which is then followed by the IP address or hostnames of the devices in the group. Groups can be referenced within a playbook to decide which hosts a playbook will run against.
 
@@ -84,20 +86,20 @@ As mentioned earlier one of the main components of an Ansible playbook are the m
 
 To get started create a file called deploy-loopback.yaml and paste in the below config, alternatively you can use the pre-made deploy-interface.yaml file which is contained within this repo under the ansible-playbooks folder. Examine the file and try to understand what its looking to do
 
-    ---
+```yaml
+---
+- hosts: test-router
+  gather_facts: false
+  connection: local
 
-    - hosts: test-router
-      gather_facts: false
-      connection: local
-
-      tasks:
-
-        - name: configure loopback interface
-          ios_config:
-            lines:
-              - description Loopback1208 created with ansible
-              - ip address 1.1.1.1 255.255.255.0
-            parents: interface Loopback1208
+  tasks:
+    - name: configure loopback interface
+      ios_config:
+        lines:
+          - description Loopback1208 created with ansible
+          - ip address 1.1.1.1 255.255.255.0
+        parents: interface Loopback1208
+```
 
 Once you have your playbook build it's now time to run it. To do this we'll use the `ansible-playbook` command, to run this successfully and authenticate properly use the argument -u and -k to ask the user for a SSH password before the playbook executes. `ansible-playbook deploy-loopback.yaml -u developer -k`
 
