@@ -117,10 +117,14 @@ Well done, you've ran your first ansible playbook!
 
 Within the ansible-playbooks folder there are some additional playbooks: change-snmp.yaml and get-backup.yaml. Explore the contents of these and run them with the `ansible-playbook -u developer <playbook name> -k` command.
 
-## Exercise 2 (Walk) - SD-WAN configuration with Ansible 
+## Exercise 2 (Walk) - SD-WAN configuration playbooks with Ansible 
 
-Now we've got to grips with the components on Ansible lets begin to get a little more advanced,
+Now we've got to grips with the components on Ansible lets begin to get a little more advanced, we've shown that with Ansible we are able to SSH into any Cisco device and with the right module can implement a configuration (WLC, ASA, NXOS, IOS, IOS-XE. This helps us solve the age old problem that's existed about moving away from box to box configuration. That being said, controller based networking solutions which take a system wide view of the network are becoming more and more popular. We can also utilise configuration tools such as Ansible in a controller based envrionment.
 
+As we did in exercise 1, you are free to use this with your own hardware or test environment. However the commands in this lab guide have been tested for the sandboxes they correspond to. For this lab guide we will be using the reservable Cisco SD-WAN  reservable sandbox which can be found on the sandbox catalogue https://devnetsandbox.cisco.com/RM/Topology
 
+![](./images/sandbox-screen-2.png)
 
-## Exercise 3 (Run) -
+## Exercise 3 (Run) - CI/CD pipeline with SD-WAN and Ansible
+
+Comming soon...
