@@ -125,7 +125,9 @@ As we did in exercise 1, you are free to use this with your own hardware or test
 
 ![](./images/sandbox-screen-2.png)
 
+With controller based networking such as SD-WAN, we will either typically use either a specific module built for that platform (as we did in the IOS examples) or we will use the REST API, ![See the rest api module if you could do with a refresher](https://github.com/GShuttleworth/REST-API-Lab-Guide). As Cisco's SD-WAN doesn't have an Ansible module specifically built for it, we'll use the REST API with Ansible playbooks to look at autating specific tasks.
 
+```Note: Configuration can be performed from its graphical user interface vManag. However vManage also offers a rich REST API. This enables the end user to automate specific workflows using favorite tools as we're exploring in this exercise```
 
 ## Exercise 3 (Run) - CI/CD pipeline with SD-WAN and Ansible
 
