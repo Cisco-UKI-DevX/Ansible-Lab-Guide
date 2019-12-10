@@ -125,6 +125,8 @@ As we did in exercise 1, you are free to use this with your own hardware or test
 
 ![](./images/sandbox-screen-2.png)
 
+
+
 ## Exercise 3 (Run) - CI/CD pipeline with SD-WAN and Ansible
 
 Comming soon...
