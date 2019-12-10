@@ -13,7 +13,7 @@ For people not familiar at all with this area, typical functionality of Ansible 
 
 ## Exercise 0 - Installing Ansible
 
-Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use a Linux for exercises 1,2 and 3 but the commands across platforms should remain consistent. For detailed installation guides please use the guide provided by ansible (INSERT LINK HERE) My preferred method for building your own network automation environment is to create a linux VM. (WHY??))
+Ansible is supported on Windows, MacOS and Linux platforms. In this exercise we'll explain the simple installation process on each platform to prepare our working environment. In the guide we'll use a Linux for exercises 1,2 and 3 but the commands across platforms should remain consistent. For detailed installation guides please use the guide provided by ansible (INSERT LINK HERE). 
 
 For speed though you may wish to install Ansible on your day to day machine which is why we have also included instructions for MacOS and windows.
 
