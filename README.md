@@ -129,6 +129,8 @@ With controller based networking such as SD-WAN, we will either typically use ei
 
 ```Note: Configuration can be performed from its graphical user interface vManag. However vManage also offers a rich REST API. This enables the end user to automate specific workflows using favorite tools as we're exploring in this exercise```
 
+### Step 1 - Working with Ansible roles
+
 ## Exercise 3 (Run) - CI/CD pipeline with SD-WAN and Ansible
 
 Comming soon...
