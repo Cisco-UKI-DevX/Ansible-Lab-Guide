@@ -117,6 +117,10 @@ Well done, you've ran your first ansible playbook!
 
 Within the ansible-playbooks folder there are some additional playbooks: change-snmp.yaml and get-backup.yaml. Explore the contents of these and run them with the `ansible-playbook -u developer <playbook name> -k` command.
 
-## Exercise 2 (Walk) -
+## Exercise 2 (Walk) - SD-WAN configuration with Ansible 
+
+Now we've got to grips with the components on Ansible lets begin to get a little more advanced,
+
+
 
 ## Exercise 3 (Run) -
