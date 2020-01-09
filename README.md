@@ -1,3 +1,5 @@
+*This lab is part of a series of guides from the [Network Automation and Tooling workshop series](https://github.com/sttrayno/Network-Automation-Tooling)*
+
 # Network Automation with Ansible - Crawl / Walk / Run
 
 # Introduction
